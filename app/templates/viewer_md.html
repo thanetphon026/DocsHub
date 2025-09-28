@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <style>@media (max-width:700px){ body{font-size: 15px;} }</style>
+</head>
+<body>
+<header class="topbar">
+  <a href="/" class="btn ghost">← Home</a>
+  <strong class="title-center ellipsis">{{ title }}</strong>
+  <span></span>
+</header>
+
+<div class="content markdown">{{ body | safe }}</div>
+
+<div class="viewer-actions">
+  <a class="btn primary xl" href="/download/{{ doc.id }}">Download</a>
+</div>
+
+<footer class="bottombar">© 2025 DocsHub. All rights reserved | Developed by Thanetphon026</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Docs Hub</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Docs Hub</h1>
+  <div class="row">
+    <button id="btnReindex" class="btn">Reindex</button>
+    <button id="btnBackup" class="btn">Backup</button>
+    <label class="btn ghost">Restore<input id="restore" type="file" accept=".gz" hidden></label>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Upload</h2>
+    <div class="row wrap">
+      <div id="drop" class="drop">Drag & Drop PDFs/MD/TXT here or tap to choose</div>
+      <input id="file" type="file" multiple accept=".pdf,.md,.txt" hidden>
+    </div>
+    <div id="queue" class="queue"></div>
+  </section>
+
+  <section class="card">
+    <h2>Tags</h2>
+    <div class="tag-row">
+      <input id="tagNew" placeholder="new-tag">
+      <button id="btnAddTag" class="btn" disabled>Add Tag</button>
+      <button id="btnDelTag" class="btn danger">Delete Tag</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div id="chips" class="facet"></div>
+    <ul id="list" class="docs"></ul>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <h3>Change Tag</h3>
+    <select id="tagSelect"></select>
+    <div class="row right">
+      <button id="btnCancel" class="btn ghost">Back</button>
+      <button id="btnUpdate" class="btn primary">Update</button>
+    </div>
+  </div>
+</div>
+
+<footer class="bottombar">© 2025 DocsHub. All rights reserved | Developed by Thanetphon026</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
